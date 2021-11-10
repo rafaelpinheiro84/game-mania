@@ -1,124 +1,111 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 /*sessão logo,menu,barra de pesquisa*/
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: #111;
-    font-family: Roboto, sans-serif;
-    
-    background-color: #E5E5E5;
-}
-
-ul {
+body, ul{
+    margin: 0px;
+    padding: 0px;
+ }
+ 
+ a {
+     color: black;
+     text-decoration: none;
+     font-family: sans-serif;
+ }
+ li:hover {
+     background: rgba(0, 0, 0, .05);
+ }
+ #logo {
+     font-size: 1.5rem;
+     font-weight: bold;
+ }
+ #header {
+     max-width: 1349px; 
+     box-sizing: border-box;
+     height: 70px;
+     padding: 1rem;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     background: #6C95BA;
+ 
+ }
+ 
+ #menu {
+    display: flex;
     list-style: none;
-    padding: 0;
-    overflow: hidden;
-    transition: all .5s;
-}
-
-nav {
-    background-color: #6C95BA;
-    padding: 0 20px;
-    justify-content: space-between;
-    align-items: center;
-    
-}
-
-nav,
-ul {
-   display: flex;
-   flex-direction: row;
-   
-}
-
-li {
-    padding: 0 20px;
-    margin-top: 15px;
-}
-
-.hide {
-    background-color: transparent;
-    border: none;
-    color: #fff;
-    font-size: 36px;
-    right: 10px;
-    top: 10px;
-    display: none;
-}
-
-li:hover,
-.hide:hover:hover{
-    cursor: pointer;
-    opacity: 0.8;
-    background: rgba(255, 255, 255, 0.2);
-    
-}
-
-.hide:focus~ul {
-    height: 260px;
-}
-.menu {
-    color: #fff;
-   
-    
-    
-}
-
-.d-flex{
-    margin-right: 15px;
-    margin-top: 10px;
-    
-}
-/*responsividade*/
-
-@media screen and (max-width: 1200px){
-    nav,
-    ul {
-        flex-direction: column;
-        
-    }
-
-    ul {
-        text-align: center;
-        margin: 0;
-        height: 0;
-    }
-
-    nav {
-        padding: 0;
-        align-items: flex-start;
-        
-    }
-
-    .hide {
-        display: flex;
-        margin-top: 10px;
-    
-    }
-    
-    .btn {
-         margin-top: -3px;
-    }
-    
-    .d-flex{
-        width: 250px;
-        margin-left: 90px;
-    }
-
-    li,
-    ul {
-        width: 100%;
-
-    }
-    .barra1{
-        width: 100%;
-    }
-   
-
-    
-
-}
+    gap: .5rem;
+ }
+ 
+ #menu a {
+   display: block;
+   padding: .5rem;
+ }
+ #btn-mobile {
+     display: none;
+ }
+ 
+ @media screen and (max-width:600px){
+ 
+     #menu {
+       display: block;
+       position: absolute;
+       width: 100%;
+       top: 70px;
+       right: 0px;
+       background: #e7e7e7;
+       transition: .6s;
+       z-index: 1000;
+       height: 0px;
+       visibility: hidden;
+       overflow-y: hidden;
+     }
+ 
+     #nav.active #menu {
+         height: calc(100vh - 70px);
+         visibility: visible;
+         overflow-y: auto;
+     }
+     #menu a{
+         padding: 1rem 0;
+         margin: 0 1rem;
+         border-bottom: 2px solid rgba(0, 0, 0, .05);
+     }
+     #btn-mobile {
+         display: flex;
+         padding: .5rem 1rem;
+         font-size: 1rem;
+         border: none;
+         background: none;
+         cursor: pointer;
+         gap: .5rem;
+     }
+     #hamburger {
+         display: block;
+         border-top: 2px solid;
+         width: 20px; 
+     }
+     #hamburger::after, #hamburger::before  {
+         content: '';
+         display: block;
+         width: 20px;
+         height: 2px;
+         background: blue;
+         margin-top: 5px;
+         background: currentColor;
+         transition: .3s;
+         position: relative;
+     }
+     #nav.active #hamburger {
+         border-top-color: transparent;
+     }
+     #nav.active #hamburger::before {
+         transform: rotate(135deg);
+     }
+     #nav.active #hamburger::after {
+         transform: rotate(-135deg);
+         top: -7px;
+ 
+     }
+ }
 /*sessão novidades*/
 .barra1 {
     background-color:#6C95BA;

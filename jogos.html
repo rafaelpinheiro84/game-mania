@@ -11,33 +11,36 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <a href="index.html"><img src="img/logo.svg" alt=""></a>
-        </div>
-        <button class="hide">&#9776;</button>
-        <ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Buscar</button>
-            </form>
-            <li>
-                <a  class="menu" href="jogos.html">Jogos</a>
-            </li>
-            <li>
-                <a class="menu" href="pcgames.html">Pc Game</a>
-            </li>
-            <li>
-                <a class="menu" href="galeria.html"><img src="img/camera.png" alt=" "></a>
-            </li>
-            <li>
-                <a class="menu" href="login.html"><img src="img/entrar 1.png" alt=" "></a>
-            </li>
-            <li>
-                <a class="menu" href="index.html"><img src="img/carrinho 3.png" alt=" "></a>
-            </li>
-        </ul>
-    </nav>
+    <header id="header"> 
+        <a id="logo" href="index.html"><img src="img/logo.svg" alt=""></a>
+        <nav id="nav">
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-activedescendant="false">Menu
+                <span id="hamburger"></span>
+               
+               </button>
+            <ul id="menu" role="menu">
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+                <li>
+                    <a  class="menu" href="jogos.html">Jogos</a>
+                </li>
+                <li>
+                    <a class="menu" href="pcgames.html">Pc Game</a>
+                </li>
+                <li>
+                    <a class="menu" href="galeria.html"><img src="img/camera.png" alt=" "></a>
+                </li>
+                <li>
+                    <a class="menu" href="login.html"><img src="img/entrar 1.png" alt=" "></a>
+                </li>
+                <li>
+                    <a class="menu" href="index.html"><img src="img/carrinho 3.png" alt=" "></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <div class="banner-2">
         <img src="img/banner3.png" class="img-fluid" alt="logo do banner">
     </div> 
@@ -360,5 +363,24 @@
             </div>
         </div>
     </footer>  
+    <script>
+        const btnMobile = document.getElementById('btn-mobile');
+
+        function toggleMenu(event) {
+            if(event.type === 'touchstart') event.preventDefault()
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('active');
+            const active = nav.classList.contains('active');
+            event.currentTarget.setAttribute('aria-expanded', active);
+             if (active) {
+              event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
+            } else {
+                event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
+            }
+        }
+
+        btnMobile.addEventListener('click', toggleMenu);
+        btnMobile.addEventListener('touchstart', toggleMenu);
+    </script>
 </body>
 </html>
