@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 /*sessão logo,menu,barra de pesquisa*/
+* {
+    box-sizing: border-box;
+    max-width: 1366px;
+
+}
 body, ul {
     margin: 0px;
     padding: 0px;
+    
     
  }
 
@@ -26,13 +32,14 @@ body, ul {
      align-items: center;
      justify-content: space-between;
      background: #6C95BA;
+     
     
  }
 
  #menu {
     display: flex;
     list-style: none;
-    gap: .5rem;
+    gap: .9rem;
  }
  
  #menu a {
@@ -42,8 +49,8 @@ body, ul {
  #btn-mobile {
      display: none;
  }
- /* responsividade menu*/
-  @media  (max-width:600px) { 
+ /* responsividade menu tablet*/
+  @media  (max-width:768px) { 
      #menu {
        display: block;
        position: absolute;
@@ -105,9 +112,45 @@ body, ul {
          top: -7px;
     
      }
-     /*final da responsividade do menu*/
     
- }
+ }/*final da responsividade do menu tablet*/
+ 
+ /*começo da responsividade mobile*/
+ @media   (max-width:320px) {
+    #header {
+       position: fixed;
+        top: -2%;
+        width: 100%;
+    }
+    #login-header{
+        background-color: #6C95BA;
+        position: relative;
+    
+    }
+    .img-fluid {
+     display: none;
+    }
+
+    .barra1 h1{
+        display: none;
+    }
+    .barra2 h2{
+        display: none;
+    }
+    .ps5  {
+        margin-top: 5rem;
+    }
+    .pc {
+        margin-top: 5rem;
+    }
+     .footer-login{
+        top: 40px;
+       /* position: static;*/
+        margin-top: 149%;
+     }
+    
+   
+}
  
 /*sessão novidades*/
 .barra1 {
@@ -129,6 +172,7 @@ h1 {
     max-width: 1200px;
     margin: 0  auto;
     margin-left: 5%;
+    margin-top: 60px;
     
 }
 
@@ -358,10 +402,13 @@ center .content .text{
 }
 
 /*responsividade roda pé*/
-@media screen and (max-width:600px){
+@media screen and (max-width:768px){
     footer{
         position: relative;
         bottom: 0px;
+        margin-top: 20px;
+        
+        
     }
     .main-content{
         flex-wrap: wrap;
@@ -377,9 +424,7 @@ center .content .text{
 /*minha sessão de login*/
 .plano-1{
     background-image: url(../img/maxresdefault\ 1.png);
-    margin-top: 1px;
-    width: 100%;
-    height: 100%;
+    
 
 }
 .nome-login{
@@ -389,7 +434,7 @@ center .content .text{
 .tela-login{
     background-color: rgba(0, 0 , 0, 0.8);
     position: absolute;
-    top: 50%;
+    top: 17rem;
     left: 50%;
     transform: translate(-50%,-50%);
     padding: 50px;
@@ -434,32 +479,41 @@ center .content .text{
 .cadastrar:hover{
     color: deepskyblue;
 }
-.login-footer{
+.footer-login{
     margin-top: 50%;
     top: 30px;
-    
 }
+#login-header a{
+    background: #6C95BA;
+    margin: 5px;
+    margin-top: 1px;
+}
+
 @media screen and (max-width:768px) {
-    .login-footer{
-        margin-top: 100%;
-        
-    }
     .tela-login{
-        margin-top: 10px;
-        padding: 20px;
-       
+        position: absolute;
+        margin-top: 40px;
+        padding: 25px;
     } 
-    
+       .footer-login{
+         margin-top: 130%;
+         position: relative ;
+        }
+        #login-header{
+         background-color: #6C95BA;
+         position: relative;
+        
+        }
 }
 
 /*sessão jogos ps5*/
 .img-fluid{
-    width: 100%;
+    max-width: 100%;
     padding: 0px 0;
     margin-top: -2px;
 }
 .ps5{
-    margin-top: 30px;
+    margin-top: 5rem;
     margin-left: 30px;
     font-weight: bolder;
 }
@@ -546,12 +600,14 @@ center .content .text{
     padding: 6px;
     margin-left: 3px;
 }
+
+
 /*sessão pc gaames*/
 .fundo{
     background-color: #C4C4C4;
 }
 .pc{
-    margin-top: 30px;
+    margin-top: 5rem;
     margin-left: 30px;
     font-weight: bolder;
     
@@ -598,10 +654,8 @@ center .content .text{
      flex: 1 1 180px;
      margin: 10px;
  }
- .foto{
+ .foto {
      text-align: center;
      margin-top: 100px;
      text-transform: uppercase;
  }
-
-    
