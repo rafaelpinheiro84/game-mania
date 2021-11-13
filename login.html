@@ -77,14 +77,14 @@
                     <form action="#">
                         <div class="email">
                             <div class="text">Email *</div>
-                            <input type="email" required>
+                            <input id="campo-email" type="email" required>
                         </div>
                         <div class="msg">
                             <div class="text">Mensagem *</div>
-                            <textarea rows="2" cols="25" required></textarea>
+                            <textarea input id="campo-mensagem" type="mensagen" rows="2" cols="25" required></textarea>
                         </div>
                         <div class="btn-2">
-                           <button type="submit" >Entrar</button>
+                            <button onclick="enviarEmail() ,enviarMensagem()">Enviar</button>
                         </div>
                     </form>
                 </div>
@@ -98,7 +98,7 @@
             </div>
         </div>
     </foote>
-    
+    <script src="js/script.js"></script>
 </body>
 
 </html>

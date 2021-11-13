@@ -10,43 +10,47 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    
 </head>
 
 <body>
     <header id="header">
-    <a id="logo" href=""><img src="img/logo.png" alt=" "></a>
-    <nav id="nav"> <!--meu menu-->
-        <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-activedescendant="false">
-            <span id="hamburger"></span>
-           </button> <!--botão hamburgue-->
-        <ul id="menu" role="menu">
-            <form  class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Buscar</button>
-            </form>
-            <li>
-                <a class="menu" href="jogos.html">Jogos</a>
-            </li>
-            <li>
-                <a class="menu" href="pcgames.html">Pc Games</a>
-            </li>
-            <li>
-                <a class="menu" href="galeria.html"><img src="img/camera.png" alt=" "></a>
-            </li>
-            <li>
-                <a class="menu" href="login.html"><img src="img/entrar 1.png" alt=" "></a>
-            </li>
-            <li>
-                <a class="menu" href="index.html"><img src="img/carrinho 3.png" alt=" "></a>
-            </li>
-        </ul>
-    </nav>
-    </header> <!--final do menu-->
-    <div class="banner"> <!--meu banner-->
+        <a id="logo" href=""><img src="img/logo.png" alt=" "></a>
+        <nav id="nav">
+            <!--meu menu-->
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                aria-activedescendant="false">
+                <span id="hamburger"></span>
+            </button>
+            <!--botão hamburgue-->
+            <ul id="menu" role="menu">
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+                <li>
+                    <a class="menu" href="jogos.html">Jogos</a>
+                </li>
+                <li>
+                    <a class="menu" href="pcgames.html">Pc Games</a>
+                </li>
+                <li>
+                    <a class="menu" href="galeria.html"><img src="img/camera.png" alt=" "></a>
+                </li>
+                <li>
+                    <a class="menu" href="login.html"><img src="img/entrar 1.png" alt=" "></a>
+                </li>
+                <li>
+                    <a class="menu" href="index.html"><img src="img/carrinho 3.png" alt=" "></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!--final do menu-->
+    <div class="banner">
+        <!--meu banner-->
         <img src="img/banner.png" class="img-fluid" alt="logo do banner">
     </div>
-     <!--sessão novidades -->
+    <!--sessão novidades -->
     <div class="barra1">
         <h1>Novidades</h1>
     </div>
@@ -210,14 +214,14 @@
                     <form action="#">
                         <div class="email">
                             <div class="text">Email *</div>
-                            <input type="email" required>
+                            <input id="campo-email" type="email" required>
                         </div>
                         <div class="msg">
                             <div class="text">Mensagem *</div>
-                            <textarea rows="2" cols="25" required></textarea>
+                            <textarea input id="campo-mensagem" type="mensagen" rows="2" cols="25" required></textarea>
                         </div>
                         <div class="btn-2">
-                            <button type="submit">Enviar</button>
+                            <button onclick="enviarEmail() ,enviarMensagem()">Enviar</button>
                         </div>
                     </form>
                 </div>
@@ -230,26 +234,10 @@
                 <span class="far fa-copyright">2021 Todos os direitos reservados</span>
             </div>
         </div>
-    </footer> <!--final footer roda pé-->
-    <!-- javascript menu-->
-    <script>
-        const btnMobile = document.getElementById('btn-mobile');
+    </footer>
+    <!--final footer roda pé-->
 
-        function toggleMenu(event) {
-            if(event.type === 'touchstart') event.preventDefault()
-            const nav = document.getElementById('nav');
-            nav.classList.toggle('active');
-            const active = nav.classList.contains('active');
-            event.currentTarget.setAttribute('aria-expanded', active);
-             if (active) {
-              event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
-            } else {
-                event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
-            }
-        }
-
-        btnMobile.addEventListener('click', toggleMenu);
-        btnMobile.addEventListener('touchstart', toggleMenu);
-    </script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
