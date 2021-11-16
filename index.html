@@ -10,6 +10,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <script src="js/jquery-3.6.0.js"></script>
 </head>
 
 <body>
@@ -17,16 +18,20 @@
         <a id="logo" href=""><img src="img/logo.png" alt=" "></a>
         <nav id="nav">
             <!--meu menu-->
+            
             <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
                 aria-activedescendant="false">
                 <span id="hamburger"></span>
-            </button>
-            <!--botão hamburgue-->
-            <ul id="menu" role="menu">
+            </button> 
+            
+            <ul id="menu"  role="menu">
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Buscar</button>
                 </form>
+                <li>
+                    <a class="menu" href="index.html">Home</a>
+                </li>
                 <li>
                     <a class="menu" href="jogos.html">Jogos</a>
                 </li>
@@ -46,17 +51,23 @@
         </nav>
     </header>
     <!--final do menu-->
-    <div class="banner">
-        <!--meu banner-->
+    <!--meu banner-->
+   <!--- <div class="banner">
         <img src="img/banner.png" class="img-fluid" alt="logo do banner">
-    </div>
+    </div>-->
+    <div id="carrossel" class="carrossel">
+         <img  src="img/banner.png" alt="Banner do ps4">
+         <img src="img/banner2.png" alt="Banner do ps5">
+         <img src="img/banner3.png" alt="Banner do pcgames">
+    </div> 
+    
     <!--sessão novidades -->
     <div class="barra1">
         <h1>Novidades</h1>
     </div>
     <section class="novidades">
         <div>
-            <img src="img/fifa22.png" alt=" ">
+            <img class="img-novidades" src="img/fifa22.png" alt=" ">
             <a href="#">
                 <p>Fifa 22</p>
             </a>
@@ -73,7 +84,7 @@
             </div>
         </div>
         <div>
-            <img src="img/pc-gamer.png" alt="">
+            <img class="img-novidades"  src="img/pc-gamer.png" alt="">
             <a href="#">
                 <p> pc gamer</p>
             </a>
@@ -90,7 +101,7 @@
             </div>
         </div>
         <div>
-            <img src="img/ps5.png" alt="">
+            <img class="img-novidades"  src="img/ps5.png" alt="">
             <a href="#">
                 <p>Console Playstation 5 Ps5</p>
             </a>
@@ -113,9 +124,9 @@
     </div>
     <section class="promoções">
         <div>
-            <img src="img/callofduty.png" alt=" ">
+            <img class="img-promoções" src="img/callofduty.png" alt=" ">
             <a href="#">
-                <p>Call of Duty Black Ops Cold War</p>
+                <p>Call of Duty Black</p>
             </a>
             <a class="valor" href="#">R$200</a>
             <div class="botões">
@@ -130,7 +141,7 @@
             </div>
         </div>
         <div>
-            <img src="img/ps4.png" alt=" ">
+            <img class="img-promoções" src="img/ps4.png" alt=" ">
             <a href="#">
                 <p>PlayStation 4</p>
             </a>
@@ -149,7 +160,7 @@
             </div>
         </div>
         <div>
-            <img src="img/cadeira-gamer.png" alt=" ">
+            <img class="img-promoções" src="img/cadeira-gamer.png" alt=" ">
             <a href="#">
                 <p>cadeira gamer</p>
             </a>
@@ -167,6 +178,7 @@
             </div>
         </div>
     </section>
+    <br>
     <!--inicio footer roda pé-->
     <footer>
         <div class="main-content">

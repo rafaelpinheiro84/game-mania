@@ -1,3 +1,35 @@
+$(document).ready(function() {
+    
+     $("#carrossel img:eq(0)").addClass("banner-ativo").show()
+
+     setInterval(slide, 4000)
+
+     function slide() {
+         if( $(".banner-ativo").next().length ) {
+             $(".banner-ativo").removeClass("banner-ativo").hide().next().addClass("banner-ativo").show()
+         } else {
+             $(".banner-ativo").removeClass().hide()
+             $("#carrossel img:eq(0)").addClass("banner-ativo").show()
+         }
+     }
+     //teste menu de barra
+    //$("#btn-mobile").click(function  () {
+      // $("#nav").toggleClasss("menu-ativo")
+
+        
+       // if($("#nav").hasClas("menu-ativo")) {
+           //  $("#nav").removeClass("menu-ativo")
+
+       // } else {
+            //$("#nav").addClass("menu-ativo")
+        // }
+
+   // })
+
+})
+
+
+
 //Menu de Barras com JS
 const btnMobile = document.getElementById('btn-mobile');
 
@@ -14,15 +46,16 @@ function toggleMenu(event) {
     }
 }
 
+
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
 
 
-
+//email
 let email = document.getElementById("campo-email");
 let mensagem = document.getElementById("campo-mensagem");
 
-////window.alert("teste");
+//window.alert("teste");
 function mostrarPopup() {
     window.alert("Hello World")
 }

@@ -5,6 +5,9 @@
     max-width: 1366px;
 
 }
+body{
+    background-color: #E5E5E5;
+}
 body, ul {
     margin: 0px;
     padding: 0px;
@@ -33,9 +36,8 @@ body, ul {
      justify-content: space-between;
      background: #6C95BA;
      
-    
  }
-
+ 
  #menu {
     display: flex;
     list-style: none;
@@ -51,6 +53,7 @@ body, ul {
  }
  /* responsividade menu tablet*/
   @media  (max-width:768px) { 
+
      #menu {
        display: block;
        position: absolute;
@@ -64,12 +67,13 @@ body, ul {
        visibility: hidden;
        overflow-y: hidden;
      }
- 
+     
      #nav.active #menu {
          height: calc(100vh - 70px);
          visibility: visible;
          overflow-y: auto;
      }
+     
      #menu a{
          padding: 1rem 0;
          margin: 0 1rem;
@@ -112,8 +116,9 @@ body, ul {
          top: -7px;
     
      }
-    
- }/*final da responsividade do menu tablet*/
+     
+ }
+ /*final da responsividade do menu tablet*/
  
  /*começo da responsividade mobile*/
  @media   (max-width:320px) {
@@ -125,7 +130,9 @@ body, ul {
     #login-header{
         background-color: #6C95BA;
         position: relative;
-    
+    }
+    .tela-login{
+        padding: 10px;
     }
     .img-fluid {
      display: none;
@@ -143,15 +150,46 @@ body, ul {
     .pc {
         margin-top: 5rem;
     }
-     .footer-login{
-        top: 40px;
-       /* position: static;*/
-        margin-top: 149%;
-     }
+    .img-pc{
+        width: 150px;
+    }
     
-   
+     .login-logo{
+        margin: 50px;
+    }
+    .gl {
+        width: 205px;
+        margin-left: 50px;
+    }
+    
+    .img-ps5  {
+        width: 150px;
+    }
+    .img-ps4{
+        width: 150px;
+    }
+    .img-xbox{
+        width: 150px;
+    }
+    .img-novidades{
+        width: 150px;
+    }
+    .img-promoções{
+        width: 150px;
+    }
+    
+    
 }
- 
+
+#carrossel img {
+    width: 100%;
+    display: none;
+}
+
+.banner-ativo {
+    display: flex;
+}
+
 /*sessão novidades*/
 .barra1 {
     background-color:#6C95BA;
@@ -169,17 +207,21 @@ h1 {
 .novidades {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0  auto;
     margin-left: 5%;
     margin-top: 60px;
     
 }
+.img-novidades{
+    max-width: 100%;
+    display: block;
+}
 
 .novidades > div {
     flex: 1 1 250px;
     margin: 20px;
-    border: 1px solid #ccc;
+  
     
 
 }
@@ -236,15 +278,19 @@ h2 {
 .promoções {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0  auto;
     margin-left: 5%;
+}
+.img-promoções{
+    max-width: 100%;
+    display: block;
 }
 
 .promoções > div {
     flex: 1 1 250px;
     margin: 20px;
-    border: 1px solid #ccc;
+   
 }
 
 .promoções p {
@@ -479,30 +525,29 @@ center .content .text{
 .cadastrar:hover{
     color: deepskyblue;
 }
-.footer-login{
-    margin-top: 50%;
-    top: 30px;
-}
-#login-header a{
+
+#login-header  {
     background: #6C95BA;
+    max-width: 100%;
+}
+.login-logo{
     margin: 5px;
-    margin-top: 1px;
+    
 }
 
 @media screen and (max-width:768px) {
     .tela-login{
         position: absolute;
-        margin-top: 40px;
+     /* margin-top: 40px;*/
         padding: 25px;
     } 
-       .footer-login{
+        .footer-login{
          margin-top: 130%;
          position: relative ;
         }
-        #login-header{
-         background-color: #6C95BA;
-         position: relative;
-        
+        .login-logo{
+            margin: 50px;
+            
         }
 }
 
@@ -520,6 +565,7 @@ center .content .text{
 .img-ps5{
     max-width: 100%;
     display: block;
+    
 }
 
 .jogos-5{
@@ -649,13 +695,16 @@ center .content .text{
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
+    
 }
  .galeria .ft{
-     flex: 1 1 180px;
+    flex: 1 1 250px;
      margin: 10px;
+     
  }
  .foto {
      text-align: center;
      margin-top: 100px;
      text-transform: uppercase;
  }
+ 
