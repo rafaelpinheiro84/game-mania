@@ -116,6 +116,21 @@ body, ul {
          top: -7px;
     
      }
+     .img-ps5  {
+        width: 180px;
+    }
+    .img-ps4{
+        width: 180px;
+    }
+    .img-xbox{
+        width: 180px;
+    }
+    .img-novidades{
+        width: 180px;
+    }
+    .img-promoções{
+        width: 180px;
+    }
      
  }
  /*final da responsividade do menu tablet*/
@@ -172,10 +187,10 @@ body, ul {
         width: 150px;
     }
     .img-novidades{
-        width: 150px;
+        width: 140px;
     }
     .img-promoções{
-        width: 150px;
+        width: 140px;
     }
     
     

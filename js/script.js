@@ -1,17 +1,17 @@
-$(document).ready(function() {
+//$(document).ready(function() {
     
-     $("#carrossel img:eq(0)").addClass("banner-ativo").show()
+    // $("#carrossel img:eq(0)").addClass("banner-ativo").show()
 
-     setInterval(slide, 4000)
+    // setInterval(slide, 4000)
 
-     function slide() {
-         if( $(".banner-ativo").next().length ) {
-             $(".banner-ativo").removeClass("banner-ativo").hide().next().addClass("banner-ativo").show()
-         } else {
-             $(".banner-ativo").removeClass().hide()
-             $("#carrossel img:eq(0)").addClass("banner-ativo").show()
-         }
-     }
+    // function slide() {
+        // if( $(".banner-ativo").next().length ) {
+         //    $(".banner-ativo").removeClass("banner-ativo").hide().next().addClass("banner-ativo").show()
+      //   } else {
+      //       $(".banner-ativo").removeClass().hide()
+       //      $("#carrossel img:eq(0)").addClass("banner-ativo").show()
+       //  }
+    // }
      //teste menu de barra
     //$("#btn-mobile").click(function  () {
       // $("#nav").toggleClasss("menu-ativo")
@@ -26,7 +26,7 @@ $(document).ready(function() {
 
    // })
 
-})
+//})
 
 
 
@@ -49,6 +49,20 @@ function toggleMenu(event) {
 
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
+
+//contador carrinho
+     let numeroProdutos = 0
+    // numeroProdutos = 1
+   //  numeroProdutos = 1
+    let marcador = document.getElementById("marcador");
+
+   function contarProdutos() {
+    numeroProdutos = numeroProdutos + 1
+     console.log(numeroProdutos)
+
+    marcador.innerText = numeroProdutos;
+   // marcador.innerHtml = numeroProdutos;
+   }
 
 
 //email
